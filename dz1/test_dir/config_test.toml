@@ -1,0 +1,3 @@
+username = "test_user"
+hostname = "test_host"
+startup_script = "commands.txt"

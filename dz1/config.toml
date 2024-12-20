@@ -1,0 +1,4 @@
+    username = "major_slava"
+    hostname = "localhost"
+    vfs_path = "virtual_filesystem.tar"
+    startup_script = "startup_commands.txt"
