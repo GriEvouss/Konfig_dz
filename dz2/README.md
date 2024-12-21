@@ -66,4 +66,4 @@ python -m unittest test_visual.py
 
 При успешном запуске тестов вы должны увидеть следущее:
 
-![alt text](image-1.png)
+![alt text](image-1.png).

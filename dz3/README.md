@@ -98,3 +98,4 @@ python -m unittest tests.py
 При успешном запуске тестов вы должны увидеть следущее:
 
 ![alt text](./imgs/image.png)
+.

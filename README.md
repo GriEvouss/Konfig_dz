@@ -1,2 +1,3 @@
 # Konfig_dz
  
+.
