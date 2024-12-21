@@ -69,6 +69,15 @@ matplotlib==3.6.3
         for dep in ['numpy', 'contourpy', 'cycler', 'kiwisolver', 'pillow', 'pyparsing', 'packaging', 'wheel', 'python']:
             self.assertIn(f"matplotlib --> {dep}", output)
 
+    def test_visualize_graph_without_versions(self):
+        dependencies = {
+            "matplotlib": ["numpy", "pillow", "cycler"],
+            "numpy": ["wheel"],
+        }
+        output = visualize_graph("matplotlib", dependencies)
+        self.assertIn("graph TD", output)
+        self.assertIn("matplotlib --> numpy", output)
+        self.assertNotIn("matplotlib --> numpy==", output)
 
     def tearDown(self):
         import os

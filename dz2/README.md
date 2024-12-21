@@ -38,9 +38,13 @@ matplotlib==3.6.3
   - pandas [required: >=1.1, installed: 2.2.3]
 ```
 
-И файл config.yaml, указывающий:
-```yaml
-package_name: 'matplotlib'
+И файл config.json, указывающий:
+```json
+{
+    "package_name": "matplotlib",
+    "output_graph_file": "graph.mmd",
+    "repository_path": "./"
+} 
 ```
 
 Запуск скрипта выведет:

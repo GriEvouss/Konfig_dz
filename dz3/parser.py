@@ -19,7 +19,7 @@ def parse_dict(data, indent=0, comments=None):
     if comments:
         # Добавляем комментарии в начало структуры
         config_lines.insert(0, "\n".join(comments))
-        
+
     for key, value in data.items():
         if key.startswith("CONST_"):
             const_name = key[6:]  # Удаляем CONST_ из имени
@@ -97,12 +97,6 @@ def extract_and_keep_comments(input_string):
 
 if __name__ == "__main__":
     json_input = """
-    /*
-    Это многострочный роир 
-    +_+_++_
-    льд
-    комментарий
-    */
     {
         "PROJECT_NAME": "NewProject",
         "VERSION": 0.1,
