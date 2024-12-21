@@ -22,8 +22,7 @@ def fetch_dependencies_from_pypi(package_name):
         print(f"Ошибка при получении данных для {package_name}")
         return []
 
-
-# Запись зависимостей в файл
+# Запись зависимостей в файл без указания версий
 def write_dependencies_to_file(dependencies, filename='dependencies.txt'):
     with open(filename, 'w') as file:
         for package, deps in dependencies.items():
@@ -32,6 +31,7 @@ def write_dependencies_to_file(dependencies, filename='dependencies.txt'):
                 # Удаляем версии и условия из строки зависимости
                 dep_cleaned = dep.split('[')[0].split('=')[0].split('<')[0].split('>')[0].strip()
                 file.write(f"  - {dep_cleaned}\n")
+
 
 
 # Чтение зависимостей из файла

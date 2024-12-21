@@ -1,3 +1,1 @@
 # Konfig_dz
- 
-.

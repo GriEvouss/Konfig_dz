@@ -23,19 +23,21 @@ python visual.py
 
 Учитывая следующий dependencies.txt:
 
-```yaml
-matplotlib==3.6.3
-  - contourpy [required: >=1.0.1, installed: 1.0.6]
-  - cycler [required: >=0.10, installed: 0.11.0]
-  - kiwisolver [required: >=1.0.1, installed: 1.4.4]
-  - numpy [required: >=1.17, installed: 1.24.1]
-  - pillow [required: >=6.2.0, installed: 9.5.0]
-  - pyparsing [required: >=2.3.1, installed: 3.0.9]
-  - python [required: >=3.7, installed: 3.8.10]
-  - packaging [required: >=20.0, installed: 24.1]
-  - fonttools [required: >=4.22.0, installed: 4.34.4]
-    - typing-extensions [required: >=3.10.0, installed: 3.10.4.0]
-  - pandas [required: >=1.1, installed: 2.2.3]
+```text
+matplotlib:
+  - contourpy
+  - cycler
+  - fonttools
+  - kiwisolver
+  - numpy
+  - packaging
+  - pillow
+  - pyparsing
+  - python-dateutil
+  - meson-python
+  - pybind11!
+  - setuptools_scm
+  - setuptools
 ```
 
 И файл config.json, указывающий:
@@ -49,21 +51,21 @@ matplotlib==3.6.3
 
 Запуск скрипта выведет:
 
-![alt text](image.png)
+    Граф сохранен в graph.mmd
+    graph TD
+        matplotlib --> contourpy
+        matplotlib --> python-dateutil
+        matplotlib --> pyparsing
+        matplotlib --> kiwisolver
+        matplotlib --> packaging
+        matplotlib --> pillow
+        matplotlib --> fonttools
+        matplotlib --> setuptools_scm
+        matplotlib --> cycler
+        matplotlib --> meson-python
+        matplotlib --> setuptools
+        matplotlib --> numpy
+        matplotlib --> pybind11!
 
-В формате png:
 
-![alt text](image-2.png)
 
-## Тестирование
-
-Чтобы запустить тесты, выполните следующую команду в терминале:
-
-```bash
-python -m unittest test_visual.py
-```
-## Ожидаемые результаты
-
-При успешном запуске тестов вы должны увидеть следущее:
-
-![alt text](image-1.png).

@@ -1,5 +1,5 @@
 {
-    "app_name": "MyApplication", 
+    "APP_NAME": "MyApplication",
     "VERSION": 1.0,
     "SETTINGS": {
         "DEBUG": true,
